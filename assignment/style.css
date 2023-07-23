@@ -1,0 +1,112 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(1.jpg);
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    max-width: 650px;
+    padding:28px;
+    margin:0 28px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+
+}
+.form-title{
+font-size: 26px;
+font-weight: 600;
+text-align: center;
+padding-bottom: 6px;
+color: white;
+text-shadow: 2px 2px 2px black;
+border-bottom: solid 1px white ;
+
+}
+.user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+
+
+}
+.user-input input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline:none;
+    border: 1px solid gray;
+    padding: 0 10px;
+}
+.gender-title{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom:1px solid white;
+}
+.gender-list{
+    margin: 15px 0;
+    color: white;
+}
+.gender-list  label{
+    padding: 0 20px 0 5px;
+}
+.gender-list label,
+.gender-title input,
+.submit-btn input{
+    cursor: pointer;
+}
+.submit-btn{
+    margin-top: 40px;
+
+}
+.submit-btn input{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size:2opx;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(209,209,209);
+    background: rgba(63, 114, 76, 0.7);
+
+}
+@media(max-width:680px){
+    .container{
+        min-width: 280px;
+    }
+    .user-input{
+        margin-bottom: 12px;
+        width: 100%;
+
+    }
+.user-input:nth-child(2n)
+{
+    justify-content:space-between ;
+}
+.gender-list{
+    display: flex;
+    justify-content: space space-between;
+    width: 100%;
+}
+.user-info{
+    max-height: 380px;
+    overflow: auto;
+
+}
+.user-info::-webkit-scrollbar{
+    width: 0;
+}
+}
+
