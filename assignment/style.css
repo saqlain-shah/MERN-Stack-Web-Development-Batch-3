@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top img{
+    padding-top: 50px;
+  height: 220px;
+  width: 260px;
+}
+.top h1{
+  font-size: 70px;
+}
+.top h4{
+  color: rgb(25, 22, 22);
+  font-size: 40px;
+}
+.sidepic img{
+  height: 100px;
+  width: 80px;
+}
+
+
+.main-continner{
+  border: 2px solid black;
+
+}
+.main h5{
+  font-size: 50px;
+}
+.main label{
+ font-size: 24px;
+}
+.main input{
+  width: 900px;
+}
+.main1 label{
+  font-size: 24px;
+}
+.main1 input{
+  height: 20px;
+  width: 380px;
+}
+.course h1{
+  font-size: 30px;
+}
+.course h6{
+  font-size: 22px;
+}
+.course{
+  padding-top: 20px;
+  border: 2px solid black;
+}
+.boxx label{
+  font-size: 22px;
+}
+.main2{
+  border: 2px solid black;
+}
+.main2 h5{
+  font-size: 27px;
+
+}
+.main2 label{
+  font-size: 23px;
+}
+.main2 input
+{
+  width: 830px;
+}
