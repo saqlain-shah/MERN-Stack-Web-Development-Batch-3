@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission form</title>
+    <link rel="stylesheet" href="admission_form.css">
+</head>
+<body>
+    <header>
+        <img src="Rinor_Logo.png" alt="">
+        <h1>Rinor Training Institute</h1>
+        <h2>Admission Form</h2>
+    </header>
+    <form method="get">
+            <fieldset>
+                <legend>Personal Information:</legend>
+                <label for="flname">Full Name:</label>
+                <input type="text" id="flname" name="flname"><br>
+                <label for="faname">Father Name:</label>
+                <input type="text" id="faname" name="faname"><br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="gender">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob"><br>
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" name="profession"><br>
+                <label for="contact">Contact Number:</label>
+                <input type="number" id="contact" name="contact">
+                <label for="whatsapp">WhatsApp(if different):</label>
+                <input type="number" id="whatsapp" name="whatsapp"><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="whatsapp" name="whatsapp">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+            </fieldset>
+            <fieldset><legend>Course Selection:</legend>
+                Please select the course(s) you are interested in <br>
+                <input type="checkbox" id="course1" name="course1" value="Mern_Stack_Web_Development">
+                <label for="course1"> MERN Stack Web Development</label><br>
+                <input type="checkbox" id="course2" name="course2" value="Ethical_Hacking">
+                <label for="course2"> Ethical Hacking</label><br>
+                <input type="checkbox" id="course3" name="course3" value="Ms_Office_Suite">
+                <label for="vehicle3"> MS Office Suite</label>
+            </fieldset>
+            <fieldset>
+                <legend>Educational Background:</legend>
+                <label for="degree">Highest Qualification:</label>
+                <input type="text" id="degree" name="degree"><br>
+                <label for="organization">Name of Last Attended School/College/University:</label>
+                <input type="text" id="organization" name="organization"><br>
+                <label for="p_year">Year of Passing:</label>
+                <input type="text" id="p_year" name="p_year"><br>
+                <label for="a_qualification">Additional Qualifications (if any):</label>
+                <input type="text" id="a_qualification" name="a_qualification"><br>
+            </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
