@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>README file in assignment folder</title>
 </head>
 <style>
     table{
@@ -59,6 +58,37 @@
               </tr>
             </tbody>
           </table>
+    </div>
+    <div class="container ">
+        <caption class="caption-top">Please fill the from carefully and enter your correct information</caption>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Username</span>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Gender</span>
+            <input type="text" class="form-control " placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Education</span>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Course</span>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Location</span>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+            <input type="file" class="form-control" id="inputGroupFile01">
+          </div>  
+          <div class="input-group mb-3">
+            <input type="button " class="btn btn-primary" value="Submit">
+          </div>  
+        
     </div>
 </body>
 </html>
