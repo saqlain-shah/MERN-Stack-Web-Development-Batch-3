@@ -59,7 +59,7 @@
             </tbody>
           </table>
     </div>
-    <div class="container ">
+    <div class="container">
         <caption class="caption-top">Please fill the from carefully and enter your correct information</caption>
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Username</span>
