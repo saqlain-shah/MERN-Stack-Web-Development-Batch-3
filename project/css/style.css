@@ -1,0 +1,247 @@
+/* CSS reset */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* CSS Variable */
+:root {
+  --navbar-hieght: 34px;
+}
+
+/* navigation bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+/* navigation bar: logo and images */
+
+#logo {
+  margin: 10px 30px;
+}
+#logo img {
+  height: 61px;
+  margin: 14px 30px;
+}
+/* navigation bar: list styling */
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 3px 23px;
+  border-radius: 20px;
+}
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+}
+/* home section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+#home::before {
+  content: "";
+  background: url("../images/bg/bg1.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 58%;
+  z-index: -1;
+  opacity: 0.72;
+}
+
+#home h1 {
+  color: black;
+  text-align: center;
+  font-family: "Baloo Bhai", cursive;
+}
+#home p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Baloo Bhai", cursive;
+}
+
+/* section services css */
+
+#services {
+  display: flex;
+  margin: 23px;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+#services .box {
+  border: 2px solid red;
+  margin: 3px 6px;
+  padding: 23px;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+#services .box img {
+  display: block;
+  /* width: 160px; */
+  height: 66px;
+  margin: auto;
+}
+#services .box p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* clients  sectiom starts */
+
+#client-section{
+  /* height: 624px; */
+
+  position: relative;
+}
+#client-section::before{
+  content: "";
+  background: url('../images/bg/bg1.jpg') no-repeat center center/cover;
+  position: absolute;
+  /* top: 0px;
+  left: 0px; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.34;
+}
+#client{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#client img{
+  height: 140px;
+}
+.client-item{
+  padding: 0px;
+}
+#client-section p{
+  text-align: center;
+  font-size: 15px;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* contact section css */
+
+#contact-section{
+  position: relative;
+  /* height: 650px; */
+}
+#contact-section::before{
+  content: "";
+   background: url('../images/bg/bg.jpg') no-repeat center center/cover;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.34;
+}
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 45px;
+}
+#contact-box form{
+  width: 40%;
+}
+#contact-box label{
+  text-align: center;
+  font-family: 'Baloo Bhai',cursive;
+  font-size: 1.2rem;
+}
+#contact-box input,
+#contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  
+}
+#contact-box input:hover,
+#contact-box textarea:hover{
+  background-color: rgb(216, 231, 232);
+}
+#contact-box button{
+  display: block;
+  width: 40%;
+  margin: 10px auto;
+}
+#contact-box button:hover{
+  background-color: rgb(16, 19, 8);
+  color: white;
+}
+
+/* footer css */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 50px;
+  font-size: 15px;
+}
+/* Utilities class */
+.h-primary {
+    font-family: "Baloo Bhai", cursive;
+    padding: 12px;
+    font-size: 2rem;
+}
+.h-secondary {
+  font-family: "Baloo Bhai", cursive;
+  padding: 12px;
+  font-size: 1.2rem;
+}
+.btn {
+  padding: 6px 30px;
+  border: 1px solid white;
+  background-color: rgb(103, 20, 20);
+  color: white;
+  margin: 14px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.center {
+  text-align: center;
+}
+
