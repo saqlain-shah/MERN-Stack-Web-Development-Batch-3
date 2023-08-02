@@ -3,10 +3,21 @@ var a = 3;
 var a = 5;
 //  console.log("value of a:", a)
  // data types
- const name = "Rafiq";
+ const CustomerName = "Rafiq";
  var age = 25;
  let gender = "male";
- let location = "";
+ let location = null;
+ var valid = false;
+ var s = undefined;
+ var s;
+ console.log(CustomerName);
+ console.log(age);
+ console.log(gender);
+ console.log(location);
+ console.log(valid);
+ console.log(s);
+ console.log(s);
+
 //  var address = "";
 //  console.log("location is :", location);
 //  console.log("address is :", address);
@@ -40,3 +51,6 @@ let obj2 = {
 
  }
  console.log("values of objects:", obj1.obj2.company);
+ console.log("values of objects member:", obj1.name);
+ console.log("values of objects member:", emlpoyee[2]);
+ 
