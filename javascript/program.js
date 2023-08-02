@@ -52,5 +52,67 @@ let obj2 = {
  }
  console.log("values of objects:", obj1.obj2.company);
  console.log("values of objects member:", obj1.name);
- console.log("values of objects member:", emlpoyee[2]);
+ console.log("values of objects member:", typeof emlpoyee[1]);
+ 
+ var x =123;
+ var y=x;
+ var y= 456;
+ console.log("value of x:", x);
+ console.log("value of y:", y);
+//operators
+
+var a = 4;
+var b = 4;
+var c= a+b;
+var d= c*5;
+if(a==b){
+    // console.log("eqaual");
+    // alert("value is true you may continue")
+}else{
+    console.log("not equal");
+}
+
+console.log("addition of a and b:", c);
+console.log("addition of a and b multi with 5 times:", d++);
+
+var f=10;
+ f &&= 5;
+ console.log(f);
+var g=10;
+ g ||= 5;
+ console.log(g);
+var h= undefined;
+ h ??= 5;
+ console.log(h);
+
+ //precedence
+
+ var w= 10 * (50 - 30) + 10;
+ console.log("value of w:" + w);
+// comprision operators
+// equal to
+ var userNameID = 12;
+ var companyID = "12";
+if(userNameID==companyID){
+    console.log("true");
+}else{
+    console.log("false");
+}
+// equal value and equal type
+ var userNameID = 12;
+ var companyID = 13;
+if(userNameID===companyID){
+    console.log("true");
+}else{
+    console.log("false");
+}
+// not equal value and not equal type
+var userNameID = 12;
+var companyID = 13;
+if(userNameID!==companyID){
+   console.log("true");
+}else{
+   console.log("false");
+}
+
  
