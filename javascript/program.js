@@ -115,4 +115,28 @@ if(userNameID!==companyID){
    console.log("false");
 }
 
- 
+//normal function 
+myFunction(4,4);
+function myFunction(a,b){
+    c= a * b;
+}
+console.log(c);
+let hello ="";
+hello = () =>{
+    return "hello world"
+}
+console.log(hello());
+//
+function myFunction(a,b){
+    return a * b;
+}
+ var q=myFunction(10,2);
+console.log(q);
+
+function work(a,b){
+    return a * b;
+}
+var x=work(q,2);
+console.log(x);
+
+//function example
