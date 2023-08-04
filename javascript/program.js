@@ -139,4 +139,42 @@ function work(a,b){
 var x=work(q,2);
 console.log(x);
 
-//function example
+//function example >> grades count
+
+// var t_marks = 1100;
+// var obt_marks= 900;
+
+function result(t_marks, obt_marks){
+    if(obt_marks>=1001){
+        let r= (obt_marks/t_marks)*100;
+        console.log("students passed with excellent marks and obtain grade is:" + r + "%");
+        console.log("students passed with quality marks:" + obt_marks);    
+    }
+    if(obt_marks<1000 &&  obt_marks>=900){
+        let r= (obt_marks/t_marks)*100;
+        console.log("students passed with good marks and obtain grade is:" + r + "%");
+        console.log("students passed with statisfied marks:" + obt_marks);    
+    }else{
+        console.log("students passed with average marks:" + obt_marks);    
+    }
+}
+
+let sum=result(1100,1001);
+// console.log("student got marks:" + sum);
+
+//age finder through function
+var brith_year = 1998;
+var current_year= 2023;
+
+function ageFinder(brith_year, current_date){
+    let age = current_date - brith_year;
+    if(age>=25 && age<=35){
+        console.log("your body strength is at peak level and your age is:" + age);
+    }else if(age>=35 && age<=45){
+        console.log("your body strength level is going to decrease and your age is:" + age);
+    }else{
+        console.log(" you need to eat maximum level of protein and your age is:" + age);
+    }
+}
+var t_age = ageFinder(brith_year, current_year);
+// console.log(t_age);
