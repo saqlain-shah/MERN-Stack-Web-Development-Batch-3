@@ -178,3 +178,43 @@ function ageFinder(brith_year, current_date){
 }
 var t_age = ageFinder(brith_year, current_year);
 // console.log(t_age);
+
+//use of include 
+const browserType = ["Google", "Facebook", "instagram", "threads", "gmail", "linkedin"];
+if (browserType.includes("Gmail")) {
+  console.log("Found gmail!");
+} else {
+  console.log("No google here!");
+}
+
+//startsWith and endsWith
+const browseType = "mozilla";
+if (browseType.endsWith("zilla")) {
+  console.log("Found zilla!");
+} else {
+  console.log("No zilla here!");
+}
+
+//indexOf()
+
+// const firstoccurence = "this is a learn javascript class, now we learn about indexOf() funcion";
+const secondoccurence = ["Google", "Facebook", "instagram", "threads", "gmail", "linkedin"];
+console.log(secondoccurence.indexOf("threads")); // 10
+
+//slice()
+var slice = "developers";
+console.log(slice.slice(1,2));
+//replace()
+var data = "this is drome";
+const updated = data.replace("d", "ch");
+console.log("misatake", data);
+console.log("updated version", updated);
+//replcaeAll()
+var quote = "to be or not to not be";
+var update = quote.replaceAll("be", "code");
+console.log(quote);
+console.log(update);
+//length()
+var sentence = "this is a script related code";
+console.log(sentence.length-1);
+
