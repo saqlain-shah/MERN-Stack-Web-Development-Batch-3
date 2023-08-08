@@ -203,18 +203,61 @@ console.log(secondoccurence.indexOf("threads")); // 10
 
 //slice()
 var slice = "developers";
-console.log(slice.slice(1,2));
-//replace()
-var data = "this is drome";
-const updated = data.replace("d", "ch");
-console.log("misatake", data);
-console.log("updated version", updated);
-//replcaeAll()
-var quote = "to be or not to not be";
-var update = quote.replaceAll("be", "code");
-console.log(quote);
-console.log(update);
-//length()
-var sentence = "this is a script related code";
-console.log(sentence.length-1);
+console.log(slice.slice(1,8));
+console.log(slice.slice(8,2));//shows nothing this is incorrectly declare
+console.log(slice.slice(-5, -2));
+console.log(slice.slice(-5, -7)); // shows nothing is incorrectly declare
+var array = "vik, john, silee, neon, daru";
+console.log(array.slice(5, 23));
+//substring
+var str = "replace, slice, substr, substring, pad";
+console.log(str.substring(7));
+console.log(str.substring(7, 20));
+//substr()
+var subst = "replace, slice, substr, substring, pad";
+console.log(subst.substr(7));
+console.log(subst.substr(-7));
+
+//uppercase() and lowerCase()
+var lowerCase = "this is a world of UNDEFINED rules";
+var uppercase = "THIS IS A WORLD OF UNDEFIENED rules";
+console.log(lowerCase.toUpperCase());
+console.log(uppercase.toLowerCase());
+//trim()
+var trim = "      this is a digital world           ";
+console.log(trim);
+console.log(trim.trim());
+console.log(trim.trimEnd());
+console.log(trim.trimStart());
+//padStart() and padEnd()
+var pad = "this";
+console.log(pad.padStart(4, "0")); //pad a string until it will reaches the length 4
+console.log(pad.padStart(20, "is")); //pad a string "is" until it will reaches the length 20
+//charAt() and charCodeAt()
+var char = "hello world!";
+console.log(char.charAt(6));
+console.log(char.charCodeAt(6));
+//split(" ") and split(",") and split("|")
+var split = "replace, slice, substr, substring, pad";
+console.log( "srf split:", split.split()); 
+console.log( "split on pipe:", split.split("|"));
+console.log( "split on space:", split.split(" "));
+console.log( "split on commas:", split.split(","));
+console.log( "split on quotes:", split.split(""));
+
+
+
+// //replace()
+// var data = "this is drome";
+// const updated = data.replace("d", "ch");
+// console.log("misatake", data);
+// console.log("updated version", updated);
+// //replcaeAll()
+// var quote = "to be or not to not be";
+// var update = quote.replaceAll("be", "code");
+// console.log(quote);
+// console.log(update);
+// //length()
+// var sentence = "this is a script related code";
+// console.log(sentence.length-1);
 
