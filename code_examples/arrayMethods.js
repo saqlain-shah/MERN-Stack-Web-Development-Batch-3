@@ -23,5 +23,13 @@ console.log(result);
 
 var simpleAlphabets = ['A', 'B', 'C', 'D', 'E', 'F'];
 
+console.log('Filter Method of Array For Alphabet Comparison')
 var result = simpleAlphabets.filter(elem => elem == 'D' );
 console.log(result);
+
+/* Map Method of Array */
+
+var simpleNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log('Map Method of Array For Number Multiplication')
+let mapped = simpleNumber.map(elem => elem * 10);
+console.log(mapped);
