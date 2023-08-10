@@ -1,0 +1,493 @@
+.header-navigation-bar,
+.header-navigation-bar * {
+  box-sizing: border-box;
+}
+.header-navigation-bar {
+  position: absolute;
+  inset: 0;
+}
+.nav-item {
+  width: 100vh;
+  height: 3vh;
+  position: static;
+}
+.stay {
+  color: #000000;
+  text-align: center;
+  font: 400 20px "Antic", sans-serif;
+  position: absolute;
+  left: calc(50% - 313px);
+  top: calc(50% - 2869px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.car {
+  color: #000000;
+  text-align: center;
+  font: 400 20px "Antic", sans-serif;
+  position: absolute;
+  left: calc(50% - 113px);
+  top: calc(50% - 2869px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.tourist-spot {
+  color: #000000;
+  text-align: center;
+  font: 400 20px "Antic", sans-serif;
+  position: absolute;
+  left: calc(50% - -96px);
+  top: calc(50% - 2869px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.blog {
+  color: #000000;
+  text-align: center;
+  font: 400 20px "Antic", sans-serif;
+  position: absolute;
+  left: calc(50% - -362px);
+  top: calc(50% - 2869px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.about-us {
+  color: #000000;
+  text-align: center;
+  font: 400 20px "Antic", sans-serif;
+  position: absolute;
+  left: calc(50% - -565px);
+  top: calc(50% - 2869px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.home {
+  position: absolute;
+  left: 18.02px;
+  top: 110px;
+  overflow: visible;
+}
+.login {
+  width: 397px;
+  height: 89.89px;
+  position: static;
+}
+.login-patner {
+  width: 397px;
+  height: 89.89px;
+  position: static;
+}
+.ic-sharp-account-circle {
+  width: 49.06px;
+  height: 80.93px;
+  position: absolute;
+  left: 1243.36px;
+  top: 38.44px;
+  overflow: hidden;
+}
+.help {
+  width: 197.42px;
+  height: 43px;
+  position: static;
+}
+.list-your-property-vehicle {
+  color: #9d9b9b;
+  text-align: left;
+  font: 400 11px "Varela", sans-serif;
+  position: absolute;
+  left: 1082px;
+  top: 54px;
+  width: 130px;
+  height: 19px;
+}
+.becom-a-patner {
+  color: #000000;
+  text-align: left;
+  font: 400 16px "Varela", sans-serif;
+  position: absolute;
+  left: 1082px;
+  top: 30px;
+  width: 133.42px;
+  height: 28px;
+}
+.headset {
+  position: absolute;
+  left: 1018px;
+  top: 32.3px;
+  overflow: visible;
+}
+.login2 {
+  width: 170.91px;
+  height: 44.22px;
+  position: static;
+}
+.my-account {
+  color: #9d9b9b;
+  text-align: left;
+  font: 400 12px "Varela", sans-serif;
+  position: absolute;
+  left: 1302.49px;
+  top: 54.53px;
+  width: 111.43px;
+  height: 19.17px;
+}
+.login3 {
+  color: #000000;
+  text-align: left;
+  font: 400 16px "Varela", sans-serif;
+  position: absolute;
+  left: 1303.57px;
+  top: 30px;
+  width: 111.43px;
+  height: 27.6px;
+}
+.vector2 {
+  position: absolute;
+  left: 1244.09px;
+  top: 29.48px;
+  overflow: visible;
+}
+.trip-to-gilgit-baltistan {
+  color: #008542;
+  text-align: left;
+  font: 800 32px "Heebo", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  left: 20px;
+  top: 37px;
+  width: 426px;
+  height: 61px;
+}
+
+.hero-section,
+.hero-section * {
+  box-sizing: border-box;
+}
+.hero-section {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-1 {
+  background: #c4c4c4;
+  width: 1440px;
+  height: 543px;
+  position: absolute;
+  left: 0px;
+  top: 104px;
+}
+.image-8 {
+  width: 1440px;
+  height: 485px;
+  position: absolute;
+  left: 0px;
+  top: 160px;
+}
+.find-your-next-stay-search-deals-on-hotels-cars-and-much-more {
+  color: #000000;
+  text-align: left;
+  position: absolute;
+  left: 37px;
+  top: 320px;
+  width: 745px;
+  height: 168px;
+}
+.find-your-next-stay-search-deals-on-hotels-cars-and-much-more-span {
+  color: #ffffff;
+  font: 400 77px "Varela", sans-serif;
+}
+.find-your-next-stay-search-deals-on-hotels-cars-and-much-more-span2 {
+  color: #ffffff;
+  font: 400 31px "Varela", sans-serif;
+}
+.ckck-btn {
+  width: 411px;
+  height: 323px;
+  position: static;
+}
+.check-box {
+  width: 411px;
+  height: 323px;
+  position: static;
+}
+.card {
+  width: 411px;
+  height: 323px;
+  position: static;
+}
+.card2 {
+  background: #fffdfb;
+  width: 411px;
+  height: 323px;
+  position: absolute;
+  left: 961px;
+  top: 248px;
+}
+.group-1 {
+  width: 369px;
+  height: 148px;
+  position: static;
+}
+.btn-2 {
+  background: #d9d9d9;
+  border-radius: 10px;
+  width: 159px;
+  height: 55px;
+  position: absolute;
+  left: 981px;
+  top: 270px;
+}
+.button-1 {
+  background: #d9d9d9;
+  border-radius: 10px;
+  width: 159px;
+  height: 55px;
+  position: absolute;
+  left: 1190px;
+  top: 270px;
+}
+.destination {
+  color: #000000;
+  text-align: left;
+  font: 400 17px "Varela", sans-serif;
+  position: absolute;
+  left: 981px;
+  top: 349px;
+}
+.no-of-person {
+  color: #000000;
+  text-align: left;
+  font: 400 17px "Varela", sans-serif;
+  position: absolute;
+  left: 980px;
+  top: 396px;
+}
+.stay {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Varela", sans-serif;
+  position: absolute;
+  left: 1030px;
+  top: 284px;
+}
+.car {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Varela", sans-serif;
+  position: absolute;
+  left: 1254px;
+  top: 284px;
+}
+.line-1 {
+  position: absolute;
+  left: 1055.94px;
+  top: 525.5px;
+  transform: translate(-0.01px, 0.5px);
+  overflow: visible;
+}
+.line-3 {
+  position: absolute;
+  left: 1097.02px;
+  top: 366.81px;
+  transform: translate(-0.03px, 1.69px);
+  overflow: visible;
+}
+._4 {
+  color: #000000;
+  text-align: center;
+  font: 400 16px "Inter", sans-serif;
+  position: absolute;
+  left: 1137px;
+  top: 396px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line-4 {
+  position: absolute;
+  left: 1113.02px;
+  top: 414px;
+  transform: translate(-0.02px, 0.2px);
+  overflow: visible;
+}
+._01-jan-2022 {
+  color: #000000;
+  text-align: center;
+  font: 400 6px "Inter", sans-serif;
+  position: absolute;
+  left: 1073px;
+  top: 510px;
+  width: 37px;
+  height: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skardu {
+  color: #000000;
+  text-align: center;
+  font: 400 16px "Inter", sans-serif;
+  position: absolute;
+  left: 1133px;
+  top: 341px;
+  width: 106px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-1 {
+  position: absolute;
+  left: 1148px;
+  top: 511px;
+  overflow: visible;
+}
+.frame-3 {
+  position: absolute;
+  left: 1302px;
+  top: 355px;
+  overflow: visible;
+}
+.rectangle-4 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgba(207, 196, 196, 0.69);
+  border-width: 1px;
+  width: 81px;
+  height: 30px;
+  position: absolute;
+  left: 975px;
+  top: 502px;
+}
+.check-in {
+  color: #525252;
+  text-align: left;
+  font: 400 12px "Varela", sans-serif;
+  position: absolute;
+  left: 985px;
+  top: 510px;
+  width: 61px;
+  height: 16px;
+}
+.line-2 {
+  position: absolute;
+  left: 1263px;
+  top: 527.5px;
+  transform: translate(-0.01px, 0.5px);
+  overflow: visible;
+}
+.frame-7 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1263px;
+  top: 502px;
+}
+._01-jan-20222 {
+  color: #000000;
+  text-align: center;
+  font: 400 11px "Inter", sans-serif;
+  position: relative;
+  width: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-2 {
+  position: absolute;
+  left: 1348px;
+  top: 512px;
+  overflow: visible;
+}
+.frame-4 {
+  position: absolute;
+  left: 1195px;
+  top: 409px;
+  overflow: visible;
+}
+.frame-6 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgba(207, 196, 196, 0.69);
+  border-width: 1px;
+  padding: 7px 10px 7px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1170px;
+  top: 502px;
+}
+.check-out {
+  color: #525252;
+  text-align: left;
+  font: 400 12px "Varela", sans-serif;
+  position: relative;
+}
+
+.slider-icon,
+.slider-icon * {
+  box-sizing: border-box;
+}
+.slider-icon {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-1 {
+  background: rgba(154, 146, 146, 0.59);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 601px;
+  top: 665px;
+}
+.ellipse-2 {
+  background: #9a9292;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 632px;
+  top: 665px;
+}
+.ellipse-3 {
+  background: #9a9292;
+  border-radius: 50%;
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  left: 664px;
+  top: 665px;
+}
+.ellipse-4 {
+  background: #9a9292;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 695px;
+  top: 665px;
+}
+.ellipse-5 {
+  background: rgba(154, 146, 146, 0.53);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 726px;
+  top: 665px;
+}
+
