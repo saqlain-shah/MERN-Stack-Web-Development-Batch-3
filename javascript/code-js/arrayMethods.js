@@ -57,13 +57,12 @@ console.log("\n sum of the array:",result);
 const foreachArray =[1, 3, 5, /*empty */, 6];
 const newArr = [];
 foreachArray.forEach((element) =>{
-  newArr.push("sam");
+  newArr.push("sam"); //length is same as above array 
 })
 console.log(foreachArray);
 console.log(newArr);
 
 var myArr = [1,2,3,4];
-
 myArr.forEach(function(elem){
   if (elem === 3) {
        return true;
@@ -71,11 +70,12 @@ myArr.forEach(function(elem){
   }
   console.log(elem);
 });
+
 const words = ["one", "two", "three", "four"];
 words.forEach((word) =>{
   console.log(word);
   if(word=== "two"){
-    words.shift();
+    words.shift();// means deleting a string from array
   }
 })
 console.log(words);
