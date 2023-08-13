@@ -245,7 +245,28 @@ console.log( "split on space:", split.split(" "));
 console.log( "split on commas:", split.split(","));
 console.log( "split on quotes:", split.split(""));
 
+//array
 
+const sequence = ["rafiq", 1, 2, 3, 5, 8, 13];
+const random = ["rafiq", 795, [0, 1, 2], "Roe", 15.5 ];
+if(random[0]===sequence[0]){
+    if(sequence[1]===random[1]){
+        console.log("matched all")
+    }else{
+        console.log("not matched");
+    }
+    console.log(`the two array items index is same "${random[0]}"`);
+}else{
+    console.log(`not matched the array item index "${random[0]}"`);
+}
+
+var shopping = ["walnut", "cockies", "rice", "chees", "butter"];
+const randm= ["tree", 795, [0., 1, 3]];
+shopping[2] = "noodles";
+console.log(shopping);
+console.log("length of array: ", shopping.length);
+console.log(shopping[3]);
+console.log(randm[2][2]);
 
 // //replace()
 // var data = "this is drome";
@@ -261,3 +282,13 @@ console.log( "split on quotes:", split.split(""));
 // var sentence = "this is a script related code";
 // console.log(sentence.length-1);
 
+//ARRAY METHODS
+
+var array = ["rafia", "shahzab", "iqbal", "maisam"];
+// var arrayString = console.log(array.join(","));
+// console.log(arrayString.slice(1,12));
+console.log(array.push("amina"));
+
+//map 
+//fro each 
+//filter
