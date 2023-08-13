@@ -51,7 +51,7 @@ function pro(a, b){
        }, 5000);
     });
 }
-pro(5, 0).then((result) =>{
+pro(9, 2).then((result) =>{
     console.log(result);
 }).catch((error) => {
     console.log(error);
