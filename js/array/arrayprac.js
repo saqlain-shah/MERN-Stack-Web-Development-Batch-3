@@ -6,9 +6,9 @@ var map1 = array.map((x) => x !== 2);
 //console.log(forEach1);
 
 
-let wajahat=['names','age','phone',['s.wajahat' , 18 , 035543]];
 //var forEach=wajahat.forEach((x) => console.log(x) )
-var filter3=wajahat.map((element, index ) => console.log(element.length<3) )
+var filter3=wajahat.map((element, index ) => console.log(element) )
+let wajahat=['names','age','phone',['s.wajahat' , 18 , 035543]];
 
 // console.log(wajahat[3][1])
 
