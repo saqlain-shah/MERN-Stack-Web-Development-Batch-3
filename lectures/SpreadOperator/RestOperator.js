@@ -1,13 +1,12 @@
-const person = {
-  naam: "John",
-  age: 30,
-  city: "New York",
-  country: "USA",
-};
+function average(...args) {
+  var sum = 0;
 
+  for (var i = 0; i < args.length; i++) {
+    sum = sum + args[i];
+  }
 
-const { naam, age, ...rest } = person;
+  var avg = sum / args.length;
+  console.log("Average of the args: ", sum);
+}
 
-console.log(naam); // 'John'
-console.log(age); // 30
-console.log(rest); // { city: 'New York', country: 'USA' }
+average(1, 2, 3, 4, 5);

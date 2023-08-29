@@ -1,6 +1,4 @@
-const obj = { x: 1, y: 2 };
-const Obj1 = [obj];
-const Obj2 = [...obj];
-console.log(Obj1);
-console.log(Obj2);
-
+var a = [10, 20, 30, 40, 50];
+var b = [60, 70, 80, 90, 100];
+var c = [...a, ...b];
+console.log(c);
