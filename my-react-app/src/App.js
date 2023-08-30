@@ -1,13 +1,13 @@
 import './App.css';
-import Button from './components/Button';
+import Millionairs from './components/Title';
 import Profile from './components/Profile';
 
 
 function App() {
   return (
     <>
+      <Millionairs/>
       <Profile/>
-      <Button/>
     </>
   );
 }
