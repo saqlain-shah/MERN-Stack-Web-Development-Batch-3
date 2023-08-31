@@ -3,7 +3,7 @@ import Profile from './components/profile'
 export default function app() {
   return(
     <>
-    <naav></naav>
+    <naav/>
     <Profile></Profile>
     
     </>
