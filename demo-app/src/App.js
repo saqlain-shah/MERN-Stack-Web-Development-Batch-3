@@ -1,12 +1,9 @@
-import naav from './components/nav'
-import Profile from './components/profile'
-export default function app() {
-  return(
+import React from "react";
+import Counter from "./components/Counter";
+export default function App() {
+  return (
     <>
-    <naav/>
-    <Profile></Profile>
-    
+    <Counter></Counter>
     </>
-  )
-  
+  );
 }
