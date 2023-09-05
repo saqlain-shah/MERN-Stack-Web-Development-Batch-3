@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ABC from "./App";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<ABC />);
+const rootElement = document.getElementById("root");
+
+// Use createRoot to render your app.
+const root = ReactDOM.createRoot(rootElement);
+root.render(<App />);
