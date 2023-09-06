@@ -16,11 +16,12 @@ export default function Form() {
     }
 
     function handleSubmit() {
-        alert(`Hello ${data.name} your email is ${data.email} and your password is ${data.password}`);
+        alert(`Hello ${data.username} your email is ${data.email} and your password is ${data.password}`);
     }
 
     return (
         <React.Fragment>
+            <div className='body'> 
             <label>User Name:</label><br />
             <input
                 type="text"
@@ -44,6 +45,7 @@ export default function Form() {
             /><br />
 
             <button onClick={handleSubmit}>Display Data</button>
+            </div>
         </React.Fragment>
     );
 }
