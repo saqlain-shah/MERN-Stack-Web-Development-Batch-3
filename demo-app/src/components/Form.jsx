@@ -16,7 +16,7 @@ export default function Form() {
     }
 
     function handleSubmit() {
-        alert(`Hello ${data.name} your email is ${data.email} and your password is ${data.password}`);
+        alert(`Hello ${data.username} your email is ${data.email} and your password is ${data.password}`);
     }
 
     return (
