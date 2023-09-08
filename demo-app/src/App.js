@@ -1,18 +1,24 @@
+// App.js (using React Router v6)
 import React from "react";
-//import Main from "./components/Main";
-//import Profile from "./components/Profile.jsx";
-import Counter from "./components/Counter";
-import LoginForm from "./components/Form";
-export default function App() {
-  return (
-    <>
-      <LoginForm />
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import SignUp from "./components/Register.jsx";
+import SignIn from "./components/Login.jsx";
 
-      {/*   
-         <Counter/>
-      <Profile />
-      <Main />
-      */}
-    </>
+function App() {
+  return (
+    <BrowserRouter>
+      <div>
+
+
+   
+
+        <Routes>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
+
+export default App;
