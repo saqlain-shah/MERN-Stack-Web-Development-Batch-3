@@ -1,30 +1,12 @@
 import React from 'react';
-import './App.css';
 
-import LoginForm from './components/login';
-import SignUp from './SignUp';
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-import Registration from './components/FormikAndYub/Formik';
-
+import Header from "./components/Portfolio/Header"
+import about from "./components/Portfolio/about"
+import "./components/DevFolio/assets/style.css"
 function App() {
   return (
-    <React.Fragment>
-      <Router>
-        <Routes>
-          {/* render the LoginForm for te root route */}
-         {/* <Route path='/' element={<LoginForm />} />  */}
-             {/* other route */}
-          {/* <Route path='/login' element={<LoginForm />} /> */}
-          {/* <Route path='/SignUp' element={<SignUp />} /> */}
-        </Routes>
-      </Router>
-      <Registration/>
-    </React.Fragment>
+   <Header/>
+    <about/>
   );
 }
 
