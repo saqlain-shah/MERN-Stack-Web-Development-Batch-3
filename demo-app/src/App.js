@@ -1,17 +1,22 @@
 import React from "react";
-import { Header } from "./components/Portfolio/Header";
-import HeroBanner from "./components/Portfolio/HeroBanner";
-import { About } from "./components/Portfolio/About";
-import { Service } from "./components/Portfolio/Service";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
+import Services from "./Pages/Services";
+import ContactUs from "./Pages/ContactUs";
 
 function App() {
   return (
-    <React.Fragment>
-      <Header />
-      <HeroBanner />
-      <About />
-      <Service />
-    </React.Fragment>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/service" element={<Services />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

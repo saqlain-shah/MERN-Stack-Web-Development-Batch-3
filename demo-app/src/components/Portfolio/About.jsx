@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const About = () => {
+const About = () => {
     return (
         <React.Fragment>
             <section id="about" className="about-mf sect-pt4 route">
@@ -81,3 +81,4 @@ export const About = () => {
     )
 }
 
+export default About

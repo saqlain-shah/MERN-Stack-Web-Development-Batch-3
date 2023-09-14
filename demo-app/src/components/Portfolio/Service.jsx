@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Service = () => {
+const Service = () => {
     const DATA = [
         {
             id: 1,
@@ -84,3 +84,5 @@ export const Service = () => {
     )
 }
 
+
+export default Service
