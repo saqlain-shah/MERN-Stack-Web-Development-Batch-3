@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Contact = () => {
+    
     return (
         <React.Fragment>
             <section id="contact" className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{ backgroundImage: " url(assets/img/overlay-bg.jpg)" }}>

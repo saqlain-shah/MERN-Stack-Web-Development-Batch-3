@@ -4,10 +4,13 @@ import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
 import Services from "./Pages/Services";
 import ContactUs from "./Pages/ContactUs";
+import ParentComponent from "./components/others/ParentComponent";
 
 function App() {
   return (
     <>
+      <ParentComponent />
+      
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,6 +19,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </Router>
+      
     </>
   );
 }
