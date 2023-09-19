@@ -1,6 +1,9 @@
 import React from 'react'
+import '../DevFolio/assets/css/style.css'
+import img from '../DevFolio/assets/img/testimonial-2.jpg'
 
-export const About = () => {
+
+const About = () => {
     return (
         <React.Fragment>
             <section id="about" className="about-mf sect-pt4 route">
@@ -13,7 +16,7 @@ export const About = () => {
                                         <div className="row">
                                             <div className="col-sm-6 col-md-5">
                                                 <div className="about-img">
-                                                    <img src="assets/img/testimonial-2.jpg" className="img-fluid rounded b-shadow-a" alt="" />
+                                                    <img src={img} className="img-fluid rounded b-shadow-a" alt="" />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6 col-md-7">
@@ -81,3 +84,4 @@ export const About = () => {
     )
 }
 
+export default About
