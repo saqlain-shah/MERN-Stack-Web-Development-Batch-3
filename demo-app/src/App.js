@@ -1,16 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import AboutUs from "./Pages/AboutUs";
-import Services from "./Pages/Services";
-import ContactUs from "./Pages/ContactUs";
-import ParentComponent from "./components/others/ParentComponent";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import Home from "./Pages/Home";
+//import AboutUs from "./Pages/AboutUs";
+//import Services from "./Pages/Services";
+//import ContactUs from "./Pages/ContactUs";
+//import ParentComponent from "./components/others/ParentComponent";
+import ProductCard from "./components/others/ProductCard";
 
 function App() {
   return (
     <>
-      <ParentComponent />
-      
+      <ProductCard />
+
+      {/*
+  <ParentComponent />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,7 +22,8 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </Router>
-      
+
+*/}
     </>
   );
 }
