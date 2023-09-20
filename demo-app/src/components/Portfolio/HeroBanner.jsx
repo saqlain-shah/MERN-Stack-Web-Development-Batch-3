@@ -14,7 +14,7 @@ const HeroBanner = () => {
                     <div className="table-cell">
                         <div className="container">
                             <p className="display-6 color-d">Hello, world!</p>
-                            <h1 className="hero-title mb-4">I am Morgan Freeman</h1>
+                            <h1 className="hero-title mb-4">I am Shahzaib Ali</h1>
                             <p className="hero-subtitle"><span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
                             <p className="pt-3"><a className="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p>
                         </div>
