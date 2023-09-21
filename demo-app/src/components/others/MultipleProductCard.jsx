@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
+import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import ProgressLoading from "./ProgressLoading"
-
+import SingleProductCard from "./SingleProductCard"
 const ProductCard = () => {
+
+    const navigate = useNavigate();
+
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const [data, setData] = useState([{
@@ -21,6 +25,15 @@ const ProductCard = () => {
         images: '',
     }])
 
+    const handleButtonClick = (index) => {
+       
+        <>     
+            {console.log("Index Value", index+1)}   
+            <SingleProductCard index={index+1} />
+        </>
+        navigate('/product-detail');
+    };
+
     const cardStyle = {
         display: 'inline-block', // Display cards in a row
         maxWidth: '300px',       // Set maximum card width
@@ -30,7 +43,7 @@ const ProductCard = () => {
     };
 
     useEffect(() => {
-        axios.get('https://dummyjson.com/products/?limit=0')
+        axios.get('https://dummyjson.com/products/')
             .then(response => {
                 setData(response.data)
                 setLoading(false)
@@ -54,12 +67,12 @@ const ProductCard = () => {
                 <p>Error: {error.message}</p>
             ) : data ? (
 
-                        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
 
-            {
-                        data.products.map((item,index ) => (
+                    {
+                        data.products.map((item, index) => (
                             <Card key={index} style={cardStyle}
-                            sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '300px', margin: 'auto', border: '1px solid #ddd', padding: '16px' }}>
+                                sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '300px', margin: 'auto', border: '1px solid #ddd', padding: '16px' }}>
                                 <CardMedia
                                     component="img"
                                     alt={item.title}
@@ -68,7 +81,7 @@ const ProductCard = () => {
                                 />
                                 <CardContent sx={{ textAlign: 'center' }}>
                                     <Typography variant="h6" component="div">
-                                        {index+1}
+                                        {index + 1}
                                     </Typography>
                                     <Typography variant="h6" component="div">
                                         {item.title}
@@ -106,13 +119,16 @@ const ProductCard = () => {
                                         />
                                     ))}
                                 </div>
-
+                                <Button variant="contained"
+                                    onClick={()=>handleButtonClick(index)}>  
+                                More Detail 
+                                </Button>
                             </Card>
-                            
+
                         ))
 
-                                    }
-                        </div>
+                    }
+                </div>
 
             ) : null}
 
