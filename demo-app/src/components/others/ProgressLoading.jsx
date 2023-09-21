@@ -11,6 +11,11 @@ export default function ProgressLoading() {
             minHeight: "100vh"
         }}>
             <CircularProgress />
+          
         </Box>
+
     );
 }
+
+
+
