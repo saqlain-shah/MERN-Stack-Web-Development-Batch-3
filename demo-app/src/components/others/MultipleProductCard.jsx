@@ -26,10 +26,11 @@ const ProductCard = () => {
     }])
 
     const handleButtonClick = (index) => {
-       
-        <>     
-            {console.log("Index Value", index+1)}   
-            <SingleProductCard index={index+1} />
+
+        <>
+
+            {console.log("Index Value", index + 1)}
+            <SingleProductCard index={index + 1} />
         </>
         navigate('/product-detail');
     };
@@ -120,8 +121,8 @@ const ProductCard = () => {
                                     ))}
                                 </div>
                                 <Button variant="contained"
-                                    onClick={()=>handleButtonClick(index)}>  
-                                More Detail 
+                                    onClick={() => handleButtonClick(index)}>
+                                    More Detail
                                 </Button>
                             </Card>
 

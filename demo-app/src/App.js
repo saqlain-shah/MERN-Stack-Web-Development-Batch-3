@@ -7,13 +7,16 @@ import ContactUs from "./Pages/ContactUs";
 import ParentComponent from "./components/others/ParentComponent";
 import MultipleProductCard from "./components/others/MultipleProductCard";
 import SingleProductCard from "./components/others/SingleProductCard";
-
+import Table from "./components/others/TableAndForm/Table";
+import Form from "./components/others/TableAndForm/FormikForm";
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<MultipleProductCard />} />
+          <Route path="/" element={<Form />} />
+          <Route path="/data-table" element={<Table component={Table}  />} />
+          <Route path="/all-product" element={<MultipleProductCard />} />
           <Route path="/product-detail" element={<SingleProductCard />} />
           <Route path="/home" element={<Home />} />
           <Route path="/parent-component" element={<ParentComponent />} />
