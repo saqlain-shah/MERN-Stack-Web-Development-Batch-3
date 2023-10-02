@@ -4,10 +4,11 @@ import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star';
 import ProgressLoading from "./ProgressLoading"
 
-const SingleProductCard = ({ index } ) => {
-    console.log("Product ID", index)
+const SingleProductCard = (props) => {
+    //const { index } = props;
+    console.log("Product ID", props.index)
 
-    const [productID, setProductID] = useState(index)
+    const [productID, setProductID] = useState(props.index)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const [data, setData] = useState({
@@ -23,8 +24,6 @@ const SingleProductCard = ({ index } ) => {
         thumbnail: '',
         images: '',
     })
-    console.log("Product ID", productID)
-
     const cardStyle = {
         display: 'inline-block', // Display cards in a row
         maxWidth: '300px',       // Set maximum card width
