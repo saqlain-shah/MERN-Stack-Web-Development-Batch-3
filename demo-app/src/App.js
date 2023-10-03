@@ -1,13 +1,11 @@
 
 import React from "react";
-import Header from "./components/Potefolio/Header";
-import HeroSection from "./components/Potefolio/Herosection";
+import FormikForm from "./components/others/TableAndForm/FormikForm";
+
 function App() {
   return (
     <>
-    <Header/>
-    <HeroSection/>
-     
+  <FormikForm/>
     </>
   );
 }
