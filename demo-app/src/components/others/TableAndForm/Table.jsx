@@ -1,8 +1,6 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { useContext } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-
-
+import { UserDataContext } from './FormikForm';
 
 const columns = [
     { field: 'id', headerName: 'ID', flex: 1 },
@@ -14,24 +12,21 @@ const columns = [
     { field: 'contactNumber', headerName: 'Contact Number', flex: 1 },
 ];
 
-const UserTable = ({ userData }) => {
-
-    console.log("Props Value ", userData)
-    const [rows, setRows] = useState(userData || '');
+const UserTable = () => {
+    const userData = useContext(UserDataContext);
 
     return (
-
-
         <div style={{ height: 400, width: '100%' }}>
-
-            <h1>
-               Data Table
-           </h1>
-            <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+            <h1>Data Table</h1>
+            <DataGrid
+                rows={userData}
+                columns={columns}
+                pageSize={5}
+                checkboxSelection
+                dataKey="id" // Set a unique identifier from your data
+            />
         </div>
     );
 };
 
 export default UserTable;
-
-
