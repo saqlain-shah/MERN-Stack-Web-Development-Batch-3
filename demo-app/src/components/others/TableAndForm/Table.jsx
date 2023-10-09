@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import { UserDataContext } from './FormikForm';
+import { UserDataContext } from '../../../index';
 
 const columns = [
     { field: 'id', headerName: 'ID', flex: 1 },
@@ -15,6 +15,8 @@ const columns = [
 const UserTable = () => {
     const userData = useContext(UserDataContext);
 
+
+    console.log("userData in the table component", userData)
     return (
         <div style={{ height: 400, width: '100%' }}>
             <h1>Data Table</h1>
@@ -23,7 +25,7 @@ const UserTable = () => {
                 columns={columns}
                 pageSize={5}
                 checkboxSelection
-                dataKey="id" // Set a unique identifier from your data
+                dataKey="id"
             />
         </div>
     );
