@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoute from "./Routes/authRoutes.js";
+import UsersRoute from "./Routes/UsersRoute.js";
 const app = express();
 
 dotenv.config();
@@ -14,6 +15,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
+app.use("/api/user", UsersRoute);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
