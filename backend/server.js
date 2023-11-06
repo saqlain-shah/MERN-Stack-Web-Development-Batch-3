@@ -3,8 +3,10 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import authRoute from "./Routes/authRoutes.js";
-import UsersRoute from "./Routes/UsersRoute.js";
+import authRoute from "./Routes/auth.routes.js";
+import UsersRoute from "./Routes/users.routes.js";
+import HotelRoute from "./Routes/hotel.routes.js";
+
 const app = express();
 
 dotenv.config();
@@ -16,6 +18,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoute);
 app.use("/api/user", UsersRoute);
+app.use("/api/hotel", HotelRoute);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
