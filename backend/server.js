@@ -1,9 +1,24 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
+import cookieParser from "cookie-parser";
+import authRoute from "./Routes/auth.routes.js";
+import UsersRoute from "./Routes/users.routes.js";
+import HotelRoute from "./Routes/hotel.routes.js";
+
 const app = express();
 
 dotenv.config();
+
+//middlewares
+app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
+
+app.use("/api/auth", authRoute);
+app.use("/api/user", UsersRoute);
+app.use("/api/hotel", HotelRoute);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
@@ -20,9 +35,9 @@ mongoose.connection.on("disconnected", () => {
 app.get("/welcome", (req, res) => {
   res.send("Hello From Backend");
 });
-
-app.listen(process.env.PORT, () => {
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
   connect();
-  console.log(`server listen on port ${process.env.PORT}`);
+  console.log(`Server Listen on port ${port}`);
   console.log("Connected to backend.");
 });
