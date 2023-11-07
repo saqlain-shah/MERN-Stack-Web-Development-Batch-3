@@ -11,11 +11,11 @@ export const createHotel = async (req, res, next) => {
         return res.status(500).json({ error: "Error uploading images" });
       }
       console.log("Passed check 2");
-
-      // Continue only if there are no Multer upload errors
+       // Continue only if there are no Multer upload errors
       try {
         // Get the file path of the uploaded image from req.file
-        const photo = req.file.path;
+        const photo = req.file.path
+        ;
         console.log(photo);
         console.log("Request Body : ", req.body);
         console.log("Request File : ", photo);
