@@ -22,7 +22,7 @@ const connect = async () => {
     console.log("Connection Error");
   }
 };
-
+ 
 mongoose.connection.on("disconnected", () => {
   console.log("MongoDB Disconnected!");
 });
