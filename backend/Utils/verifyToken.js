@@ -14,7 +14,7 @@ export const verifyToken = (req, res, next) => {
       }
     );
   } else {
-    res.status(401).send({ err, message: "Invalid token" });
+    res.status(401).send({message: "Invalid token" });
   }
 };
 export const verifyUser = (req, res, next) => {
