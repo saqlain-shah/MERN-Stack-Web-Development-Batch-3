@@ -12,7 +12,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -21,14 +21,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "plugins": [
-      "react-hooks"
-    ],
-    "rules": {
-      "react-hooks/rules-of-hooks": "off",
-      "react-hooks/exhaustive-deps": "off"
-    }
+    ]
   },
   "browserslist": {
     "production": [

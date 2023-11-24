@@ -1,13 +1,18 @@
 import React from "react";
-//import Profile from "./component/Profile";
-//import  Product from "./component/Product";
-//import A from "./component/pro";
-import Buttom from "./component/Counter"
+//import Main from "./components/Main";
+//import Profile from "./components/Profile.jsx";
+//import Counter from "./components/Counter";
+import LoginForm from "./components/Login";
 export default function App() {
   return (
     <>
-       <Buttom/>
- 
+      <LoginForm />
+
+      {/*   
+         <Counter/>
+      <Profile />
+      <Main />
+      */}
     </>
   );
 }
