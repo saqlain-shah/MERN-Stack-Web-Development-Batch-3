@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "30f40cb4-713a-42fc-9292-e49ab194c29e",
+		"name": "HotelBookingAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19204061",
+		"_collection_link": "https://crimson-meadow-124096.postman.co/workspace/Batch-3~7ce0c8f4-c67b-4cc3-b171-980e0906f194/collection/19204061-30f40cb4-713a-42fc-9292-e49ab194c29e?action=share&source=collection_link&creator=19204061"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get All Users Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"suhail1 \",\r\n    \"email\": \"suhail1@gmail.com \",\r\n    \"password\": \"12345 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"followRedirects": false,
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ali@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Authentication",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/checkauthentication",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"checkauthentication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/checkadmin/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"checkadmin",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6544f98e54b8b31a56098d5c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/checkuser/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"checkuser",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6544f98e54b8b31a56098d5c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6544f98e54b8b31a56098d5c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6544f98e54b8b31a56098d5c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"sohail1@gmail.com \"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "654a2040103bca035876971d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Sample Hotel",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Luxury",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Sample City",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123 Sample Street",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "1.5 miles",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": "/C:/Users/Shah/Desktop/SS.png"
+								},
+								{
+									"key": "title",
+									"value": "Sample Hotel Title",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "This is a sample hotel description",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4.5",
+									"type": "text"
+								},
+								{
+									"key": "cheapestPrice",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/hotel/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hotel",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create hotel",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "{",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "\"name\"",
+										"value": " \"Hotel Example\",",
+										"type": "text"
+									},
+									{
+										"key": "\"type\"",
+										"value": " \"Luxury\",",
+										"type": "text"
+									},
+									{
+										"key": "\"city\"",
+										"value": " \"New York\",",
+										"type": "text"
+									},
+									{
+										"key": "\"address\"",
+										"value": " \"123 Main Street\",",
+										"type": "text"
+									},
+									{
+										"key": "\"distance\"",
+										"value": " \"2 miles\",",
+										"type": "text"
+									},
+									{
+										"key": "\"photos\"",
+										"value": " [\"photo1.jpg\", \"photo2.jpg\", \"photo3.jpg\"],",
+										"type": "text"
+									},
+									{
+										"key": "\"title\"",
+										"value": " \"Luxury Hotel with Stunning Views\",",
+										"type": "text"
+									},
+									{
+										"key": "\"desc\"",
+										"value": " \"Experience the epitome of luxury at our hotel with breathtaking views of the city.\",",
+										"type": "text"
+									},
+									{
+										"key": "\"rating\"",
+										"value": " 4.5,",
+										"type": "text"
+									},
+									{
+										"key": "\"rooms\"",
+										"value": " [\"Single Room\", \"Double Room\", \"Suite\"],",
+										"type": "text"
+									},
+									{
+										"key": "\"cheapestPrice\"",
+										"value": " 250,",
+										"type": "text"
+									},
+									{
+										"key": "\"featured\"",
+										"value": " true",
+										"type": "text"
+									},
+									{
+										"key": "}",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Sample Hotel",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "Luxury",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Sample City",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "123 Sample Street",
+											"type": "text"
+										},
+										{
+											"key": "distance",
+											"value": "1.5 miles",
+											"type": "text"
+										},
+										{
+											"key": "photos",
+											"type": "file",
+											"src": "/C:/Users/Shah/Desktop/SS.png"
+										},
+										{
+											"key": "title",
+											"value": "Sample Hotel Title",
+											"type": "text"
+										},
+										{
+											"key": "desc",
+											"value": "This is a sample hotel description",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "4.5",
+											"type": "text"
+										},
+										{
+											"key": "cheapestPrice",
+											"value": "150",
+											"type": "text"
+										},
+										{
+											"key": "featured",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/hotel/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"hotel",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-pvvsIEM2Z0Cl8qMQltEGFhVgr3g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 11:48:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Error creating hotel\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8000/api/hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Sample Hotel",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Luxury",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Sample City",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123 Sample Street",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "1.5 miles",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": "/E:/mernStackCourseBatch3/backend/IMG_20220725_145248_150.jpg"
+								},
+								{
+									"key": "title",
+									"value": "Sample Hotel Title",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "This is a sample hotel description",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4.5",
+									"type": "text"
+								},
+								{
+									"key": "cheapestPrice",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "featured",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/hotel/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hotel",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
