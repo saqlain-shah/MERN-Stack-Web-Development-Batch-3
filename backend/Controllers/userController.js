@@ -2,9 +2,20 @@ import User from "../Models/userModel.js";
 import { createError } from "../Utils/Error.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import validator from 'validator';
 
 export const Register = async (req, res, next) => {
   try {
+
+
+    if (req.body.username && /[A-Z]/.test(req.body.username)) {
+      return res.status(400).json({ error: 'Invalid  format use lowercase like{abc}' })
+    }
+
+    if (req.body.email && !validator.isEmail(req.body.email)) {
+      return res.status(400).json({ error: 'Invalid email format' })
+    }
+
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
 
@@ -39,14 +50,14 @@ export const Login = async (req, res, next) => {
       process.env.JWT_SECRET_KEY
     );
 
-  const { password, isAdmin, ...otherDetails } = user._doc;
-   console.log("Cookie", token);
+    const { password, isAdmin, ...otherDetails } = user._doc;
+    console.log("Cookie", token);
     res
       .cookie("access_token", token, {
         httpOnly: true,
       })
       .status(200)
-        .json({ details: { ...otherDetails }, isAdmin });
+      .json({ details: { ...otherDetails }, isAdmin });
   } catch (err) {
     next(err);
   }
