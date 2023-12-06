@@ -66,7 +66,7 @@ function HotelCreate() {
         });
     return (
         <div className='container'>
-
+            <h4>Create Hotel</h4>
             <form onSubmit={myFormik.handleSubmit}>
                 <div className='row'>
                     <div className="col-lg-6">

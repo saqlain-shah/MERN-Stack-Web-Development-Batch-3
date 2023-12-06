@@ -66,7 +66,7 @@ function BookingCreate() {
         });
     return (
         <div className='container'>
-
+            <h4>Create Booking</h4>
             <form onSubmit={myFormik.handleSubmit}>
                 <div className='row'>
                     <div className="col-lg-6">

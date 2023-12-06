@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 function UserView() {
     const params = useParams();
-    console.log("User View",params)
+    console.log("User View", params)
     const [userList, setUserList] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
@@ -16,7 +16,7 @@ function UserView() {
 
     let getUsers = async () => {
         try {
-            const user = await axios.get(`http://localhost:8000/api/users/${params.id}`,{withCredentials:true});
+            const user = await axios.get(`http://localhost:8000/api/users/${params.id}`, { withCredentials: true });
             // console.log(user);
             setUserList(user.data);
             // console.log(userList);
@@ -29,6 +29,8 @@ function UserView() {
 
     return (
         <>
+            <h4>View User</h4>
+
             <div>UserView - {params.id}</div>
             <div className="card shadow mb-4">
                 <div className="card-header py-3">

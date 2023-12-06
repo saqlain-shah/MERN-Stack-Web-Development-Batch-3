@@ -69,6 +69,7 @@ function HotelList() {
 
     return (
         <>
+            <h4>Hotel List </h4>
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">User-List</h1>
                 <Link to="/portal/create-user" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">

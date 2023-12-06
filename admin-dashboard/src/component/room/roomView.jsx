@@ -29,6 +29,8 @@ function RoomView() {
 
     return (
         <>
+            <h4>View Room</h4>
+
             <div>UserView - {params.id}</div>
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
