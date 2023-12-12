@@ -63,58 +63,6 @@ export const updateRoom = async (req, res, next) => {
   }
 };
 
-////update RoomNumber
-export const updateRoomnum = async (req, res, next) => {
-  const hotelId = req.params.hotelId;
-  const roomId = req.params.roomId;
-  const roomNumId = req.params.roomNumId;
-  console.log("hotelId",hotelId)
-  console.log("roomId",roomId)
-  console.log("roomNumId",roomNumId)
-
-  try {
-    const emptyFields = Object.keys(req.body).filter(field => req.body[field] === "");
-    if (emptyFields.length > 0) {
-      return res.status(400).send({ message: "Empty field(s): " + emptyFields.join(', ') });
-    }
-
-    // Update the roomnumber
-    const updateRoomnum = await Room.findByIdAndUpdate(
-      roomNumId,
-      roomId,
-      { _id: roomNumId, "rooms._id": roomId },
-      { $set: { "rooms.$": req.body } },
-      { new: true }
-    );
-    
-    console.log("updateRoomnum",updateRoomnum)
-    // Check if updateRoomnum is null
-    if (!updateRoomnum) {
-      return res.status(404).json({ message: "Room number not found." });
-    }
-
-    // Update the room
-    const updatedRoom = await Room.findOneAndUpdate(
-      { _id: roomId, "rooms._id": updateRoomnum._id },
-      { $set: { "rooms.$": updateRoomnum } },
-      { new: true }
-    );
-
-    // Update the hotel's reference to the room
-    const updatedHotel = await Hotel.findOneAndUpdate(
-      { _id: hotelId, "rooms._id": updatedRoom._id },
-      { $set: { "rooms.$": updatedRoom } },
-      { new: true }
-    );
-
-    res.status(200).json({ updateRoomnum, updatedRoom, updatedHotel });
-  } catch (err) {
-    next(err);
-  }
-};
-
-
-
 export const updateRoomAvailability = async (req, res, next) => {
   try {
     await Room.updateOne(
