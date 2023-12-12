@@ -17,12 +17,12 @@ function UserView() {
   let getUsers = async () => {
     try {
       const user = await axios.get(
-        `http://localhost:8000/api/users/${params.id}`,
+        `http://localhost:5000/api/user/${params.id}`,
         { withCredentials: true }
       );
-      // console.log(user);
+      console.log(user);
       setUserList(user.data);
-      // console.log(userList);
+      console.log(userList);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -59,16 +59,6 @@ function UserView() {
                     <th>Country</th>
                   </tr>
                 </thead>
-                <tfoot>
-                  <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>E-mail</th>
-                    <th>City</th>
-                    <th>State</th>
-                    <th>Country</th>
-                  </tr>
-                </tfoot>
                 <tbody>
                   <tr>
                     <td>{userList.id}</td>

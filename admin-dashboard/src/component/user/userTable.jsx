@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
@@ -9,7 +9,7 @@ function UserList() {
     const [userList, setUserList] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
-    const apiUrl = 'http://localhost:8000/api/users/';
+    const apiUrl = 'http://localhost:5000/api/user/';
 
     useEffect(() => {
         getUsers();
@@ -18,11 +18,11 @@ function UserList() {
 
     let getUsers = async () => {
         try {
-            const users = await axios.get(apiUrl, { withCredentials: true })
+            await axios.get(apiUrl, { withCredentials: true })
                 // setUserList(users.data.data)
                 .then((users) => {
-                    setUserList(users.data.data);
-                    console.log(users.data.data)
+                    setUserList(users.data);
+                    console.log(users.data)
                 })
                 .then(() => {
                     setLoading(false);
@@ -37,9 +37,10 @@ function UserList() {
 
     let handleDelete = async (id) => {
         try {
+            console.log("ID",id)
             const confirmDelete = window.confirm("Are you sure you want to delete the data?");
             if (confirmDelete) {
-                await axios.delete(`${apiUrl}:${id}`);
+                await axios.delete(`http://localhost:5000/api/user/${id}`);
                 getUsers();
             }
         } catch (error) {
@@ -67,13 +68,8 @@ function UserList() {
             ),
         },
     ];
-    const rows = [
-        { id: 1, username: 'user1', email: 'user1@example.com', isAdmin: true, password: '********', _id: 'user1_id' },
-        { id: 2, username: 'user2', email: 'user2@example.com', isAdmin: false, password: '********', _id: 'user2_id' },
-        { id: 3, username: 'user3', email: 'user3@example.com', isAdmin: false, password: '********', _id: 'user3_id' },
-        { id: 4, username: 'user4', email: 'user4@example.com', isAdmin: false, password: '********', _id: 'user4_id' },
-      ];
-      
+
+
     return (
         <>
             <h4>User List </h4>
@@ -87,10 +83,10 @@ function UserList() {
             </div>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
-                    rows={rows}
+                    rows={userList}
                     columns={columns}
                     pageSize={5}
-                    // loading={isLoading}
+                    loading={isLoading}
                     getRowId={getRowId}
                 />
             </div>

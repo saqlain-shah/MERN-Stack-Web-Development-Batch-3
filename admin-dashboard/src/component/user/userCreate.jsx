@@ -12,7 +12,7 @@ function UserCreate() {
             initialValues: {
                 username: "",
                 email: "",
-                password:""
+                password: ""
             },
             // Validating Forms while entering the data
             validate: (values) => {
@@ -33,23 +33,23 @@ function UserCreate() {
                 }
                 if (!values.password) {
                     errors.password = "Please enter a password (at least 8 characters)";
-                  } else if (values.password.length < 8) {
+                } else if (values.password.length < 8) {
                     errors.password = "Password must be at least 8 characters";
-                  } else if (!/[A-Z]/.test(values.password)) {
+                } else if (!/[A-Z]/.test(values.password)) {
                     errors.password = "Password must contain at least one uppercase letter";
-                  } else if (!/\d/.test(values.password)) {
+                } else if (!/\d/.test(values.password)) {
                     errors.password = "Password must contain at least one number";
-                  } else if (!/[!@#$%^&*()-_=+{};:,<.>]/.test(values.password)) {
+                } else if (!/[!@#$%^&*()-_=+{};:,<.>]/.test(values.password)) {
                     errors.password = "Password must contain at least one symbol";
-                  }
+                }
                 return errors;
             },
             //one can be able to submit once the validates returns empty value (validation successful) else can't be submitted
             onSubmit: async (values) => {
                 try {
                     setLoading(true);
-                    await axios.post("https://63a9bccb7d7edb3ae616b639.mockapi.io/users", values);
-                    navigate("/portal/user-list");
+                    await axios.post("http://localhost:5000/api/auth/registered", values);
+                    navigate("/user-list");
                 } catch (error) {
                     console.log(error);
                     alert("Validation failed");
@@ -89,9 +89,9 @@ function UserCreate() {
 
 
                 </div>
-                    <div className='col-lg-6 mt-3'>
-                        <input style={{width:'30%'}} disabled={isLoading} type="submit" value={isLoading ? "Submitting..." : "Create Now"} className=' btn btn-primary' />
-                    </div>
+                <div className='col-lg-6 mt-3'>
+                    <input style={{ width: '30%' }} disabled={isLoading} type="submit" value={isLoading ? "Submitting..." : "Create Now"} className=' btn btn-primary' />
+                </div>
             </form>
             {/* {JSON.stringify(myFormik.values)} */}
         </div>
