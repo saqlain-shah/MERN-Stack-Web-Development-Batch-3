@@ -50,41 +50,45 @@ function RoomList() {
 
     const columns = [
         // { field: 'id', headerName: 'ID', flex: 1 },
-        { field: 'username', headerName: 'Name', flex: 1 },
-        { field: 'email', headerName: 'E-Mail', flex: 1 },
-        { field: 'isAdmin', headerName: 'IsAdmin', flex: 1 },
+        { field: 'title', headerName: 'Title', flex: 1 },
+        { field: 'price', headerName: 'Price', flex: 1 },
+        { field: 'maxPeople', headerName: 'MaxPeople', flex: 1 },
+        { field: 'desc', headerName: 'Description', flex: 1 },
         {
             field: 'actions',
             headerName: 'Actions',
             width: 200,
             renderCell: (params) => (
                 <div>
-                    <Link to={`/portal/user-view/${params.row._id}`} className='btn btn-primary btn-sm mr-1'>View</Link>
-                    <Link to={`/portal/user-edit/${params.row._id}`} className='btn btn-info btn-sm mr-1'>Edit</Link>
+                    <Link to={`/room-view/${params.row._id}`} className='btn btn-primary btn-sm mr-1'>View</Link>
+                    <Link to={`/room-edit/${params.row._id}`} className='btn btn-info btn-sm mr-1'>Edit</Link>
                     <button onClick={() => handleDelete(params.row._id)} className='btn btn-danger btn-sm mr-1'>Delete</button>
                 </div>
             ),
         },
     ];
-
+const rows = [
+    {id:1, title: 'Cabin', price:'200', maxPeople:'5', desc:'Attach bath', _id:"Romm-1" },
+    {id:1, title: 'Luxury', price:'500', maxPeople:'2', desc:'Night stay', _id:"Romm-2" },
+]
     return (
         <>
-            <h4>Room List </h4>
+            <h4>Room List</h4>
 
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 className="h3 mb-0 text-gray-800">User-List</h1>
-                <Link to="/portal/create-user" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                <h1 className="h3 mb-0 text-gray-800">Room-List</h1>
+                <Link to="/room-create" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                     <FontAwesomeIcon icon={faUser} className="creatinguser mr-2" />
-                    Create User
+                    Add Room
                 </Link>
             </div>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
 
-                    rows={userList}
+                    rows={rows}
                     columns={columns}
                     pageSize={5}
-                    loading={isLoading}
+                    // loading={isLoading}
                     getRowId={getRowId}
                 />
             </div>

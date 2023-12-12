@@ -50,41 +50,47 @@ function UserList() {
 
     const columns = [
         // { field: 'id', headerName: 'ID', flex: 1 },
-        { field: 'username', headerName: 'Name', flex: 1 },
+        { field: 'username', headerName: 'Username', flex: 1 },
         { field: 'email', headerName: 'E-Mail', flex: 1 },
         { field: 'isAdmin', headerName: 'IsAdmin', flex: 1 },
+        { field: 'password', headerName: 'Password', flex: 1 },
         {
             field: 'actions',
             headerName: 'Actions',
             width: 200,
             renderCell: (params) => (
                 <div>
-                    <Link to={`/portal/user-view/${params.row._id}`} className='btn btn-primary btn-sm mr-1'>View</Link>
-                    <Link to={`/portal/user-edit/${params.row._id}`} className='btn btn-info btn-sm mr-1'>Edit</Link>
+                    <Link to={`/user-view/${params.row._id}`} className='btn btn-primary btn-sm mr-1'>View</Link>
+                    <Link to={`/user-edit/${params.row._id}`} className='btn btn-info btn-sm mr-1'>Edit</Link>
                     <button onClick={() => handleDelete(params.row._id)} className='btn btn-danger btn-sm mr-1'>Delete</button>
                 </div>
             ),
         },
     ];
-
+    const rows = [
+        { id: 1, username: 'user1', email: 'user1@example.com', isAdmin: true, password: '********', _id: 'user1_id' },
+        { id: 2, username: 'user2', email: 'user2@example.com', isAdmin: false, password: '********', _id: 'user2_id' },
+        { id: 3, username: 'user3', email: 'user3@example.com', isAdmin: false, password: '********', _id: 'user3_id' },
+        { id: 4, username: 'user4', email: 'user4@example.com', isAdmin: false, password: '********', _id: 'user4_id' },
+      ];
+      
     return (
         <>
             <h4>User List </h4>
 
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">User-List</h1>
-                <Link to="/portal/create-user" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                <Link to="/user-create" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                     <FontAwesomeIcon icon={faUser} className="creatinguser mr-2" />
                     Create User
                 </Link>
             </div>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
-
-                    rows={userList}
+                    rows={rows}
                     columns={columns}
                     pageSize={5}
-                    loading={isLoading}
+                    // loading={isLoading}
                     getRowId={getRowId}
                 />
             </div>

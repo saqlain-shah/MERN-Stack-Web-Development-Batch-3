@@ -39,7 +39,8 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
       <Route path='/' element={<Portal />}>
-        <Route path='dashboard' element={<Dashboard />} />
+        <Route path='/' element={<Dashboard />} />
+        
         <Route path='user-create' element={<UserCreate />} />
         <Route path='user-list' element={<UserList />} />
         <Route path='user-view/:id' element={<UserView />} />

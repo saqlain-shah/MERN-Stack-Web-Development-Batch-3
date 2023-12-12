@@ -1,6 +1,5 @@
-import { faBook, faFaceLaughWink, faHotel, faTachographDigital, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faHotel, faTachographDigital, faUsers } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
 import { Link } from 'react-router-dom'
 import LOGO from "./logo.png"
 function Sidebar() {
@@ -16,7 +15,7 @@ function Sidebar() {
 
             {/* <!-- Nav Item - Dashboard --> */}
             <li className="nav-item active">
-                <Link className="nav-link" to="/portal/dashboard">
+                <Link className="nav-link" to="/">
                     <FontAwesomeIcon icon={faTachographDigital} style={{ marginRight: "0.5rem" }} />
                     <span>Dashboard</span>
                 </Link>
@@ -26,21 +25,27 @@ function Sidebar() {
 
             {/* <!-- Nav Item - Users --> */}
             <li className="nav-item active">
-                <Link className="nav-link" to="/portal/user-list">
+                <Link className="nav-link" to="/user-list">
                     <FontAwesomeIcon icon={faUsers} style={{ marginRight: "0.5rem" }} />
                     <span>Users</span>
                 </Link>
             </li>
             <li className="nav-item active">
-                <Link className="nav-link" to="/portal/user-list">
+                <Link className="nav-link" to="/hotel-list">
                     <FontAwesomeIcon icon={faHotel} style={{ marginRight: "0.5rem" }} />
                     <span>Hotel</span>
                 </Link>
             </li>
             <li className="nav-item active">
-                <Link className="nav-link" to="/portal/user-list">
+                <Link className="nav-link" to="/booking-list">
                     <FontAwesomeIcon icon={faBook} style={{ marginRight: "0.5rem" }} />
                     <span>Booking</span>
+                </Link>
+            </li>
+            <li className="nav-item active">
+                <Link className="nav-link" to="/room-list">
+                    <FontAwesomeIcon icon={faBook} style={{ marginRight: "0.5rem" }} />
+                    <span>Room</span>
                 </Link>
             </li>
 

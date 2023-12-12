@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
+// import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 
 function BookingList() {
     const [userList, setUserList] = useState([]);
@@ -50,40 +51,44 @@ function BookingList() {
 
     const columns = [
         // { field: 'id', headerName: 'ID', flex: 1 },
-        { field: 'username', headerName: 'Name', flex: 1 },
-        { field: 'email', headerName: 'E-Mail', flex: 1 },
-        { field: 'isAdmin', headerName: 'IsAdmin', flex: 1 },
+        { field: 'HotelId', headerName: 'Hotel-ID', flex: 1 },
+        { field: 'roomId', headerName: 'Room-ID', flex: 1 },
+        { field: 'toDate', headerName: 'To-Date', flex: 1 },
+        { field: 'fromDate', headerName: 'From-Date', flex: 1 },
         {
             field: 'actions',
             headerName: 'Actions',
             width: 200,
             renderCell: (params) => (
                 <div>
-                    <Link to={`/portal/user-view/${params.row._id}`} className='btn btn-primary btn-sm mr-1'>View</Link>
-                    <Link to={`/portal/user-edit/${params.row._id}`} className='btn btn-info btn-sm mr-1'>Edit</Link>
+                    <Link to={`/booking-view/${params.row._id}`} className='btn btn-primary btn-sm mr-1'>View</Link>
+                    <Link to={`/booking-edit/${params.row._id}`} className='btn btn-info btn-sm mr-1'>Edit</Link>
                     <button onClick={() => handleDelete(params.row._id)} className='btn btn-danger btn-sm mr-1'>Delete</button>
                 </div>
             ),
         },
     ];
-
+const rows= [
+    {id: 1, HotelId: "Hotel_A", roomId:'room1', toDate:'12-05-2023', fromDate:'12-15-2023', _id:'booking_1'},
+    {id: 1, HotelId: "Hotel_B", roomId:'romm2', toDate:'12-05-2023', fromDate:'12-15-2023', _id:'booking_2'},
+];
     return (
         <>
             <h4>Booking List </h4>
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 className="h3 mb-0 text-gray-800">User-List</h1>
-                <Link to="/portal/create-user" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <FontAwesomeIcon icon={faUser} className="creatinguser mr-2" />
-                    Create User
+                <h1 className="h3 mb-0 text-gray-800">Booking-List</h1>
+                <Link to="/booking-create" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                    <FontAwesomeIcon icon={faBook} className="creatinguser mr-2" />
+                    Create Booking
                 </Link>
             </div>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
 
-                    rows={userList}
+                    rows={rows}
                     columns={columns}
                     pageSize={5}
-                    loading={isLoading}
+                    // loading={isLoading}
                     getRowId={getRowId}
                 />
             </div>
