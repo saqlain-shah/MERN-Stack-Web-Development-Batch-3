@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import Topbar from './Topbar'
+import Dashboard from "../component/Dashboard"
 import Userlist from './Userlist'
 
 function Portal() {

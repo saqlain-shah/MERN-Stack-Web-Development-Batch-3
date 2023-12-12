@@ -1,5 +1,5 @@
 {
-  "name": "my-react-app",
+  "name": "admin-dashbaord",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,25 +16,25 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/material": "^5.14.20",
+    "@mui/material": "^5.14.19",
     "@mui/x-data-grid": "^6.18.3",
     "axios": "^1.6.2",
-    "chart.js": "^4.4.1",
+    "chart.js": "^4.4.0",
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
-    "web-vitals": "^3.5.0"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react": "^4.2.0",
-    "eslint": "^8.53.0",
-    "eslint-plugin-react": "^7.33.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "vite": "^5.0.0"
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
   }
 }
