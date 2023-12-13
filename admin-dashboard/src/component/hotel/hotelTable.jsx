@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
@@ -7,24 +7,24 @@ import axios from "axios";
 import { faHotel } from "@fortawesome/free-solid-svg-icons";
 
 function HotelList() {
-  const [userList, setUserList] = useState([]);
+  const [hotelList, setUserList] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
-  const apiUrl = "http://localhost:8000/api/users/";
+  const apiUrl = "http://localhost:5000/api/hotel";
 
   useEffect(() => {
     getUsers();
-    console.log("welcome");
+
   }, []);
 
   let getUsers = async () => {
     try {
-      const users = await axios
+      await axios
         .get(apiUrl, { withCredentials: true })
         // setUserList(users.data.data)
-        .then((users) => {
-          setUserList(users.data.data);
-          console.log(users.data.data);
+        .then((hotelList) => {
+          setUserList(hotelList.data);
+          console.log(hotelList.data);
         })
         .then(() => {
           setLoading(false);
@@ -92,69 +92,7 @@ function HotelList() {
       ),
     },
   ];
-  const rows = [
-    {
-      id: 1,
-      name: "Hotel A",
-      type: "Luxury",
-      city: "Skardu",
-      address: "Skardu main city",
-      distance: 5,
-      photos: "hotelA.jpg",
-      title: "Hotel A Title",
-      desc: "Luxury hotel with great amenities",
-      rooms: 50,
-      rating: 4.5,
-      cheapestPrice: 150,
-      featured: "",
-      _id: 'Hotel_A'
-    },
-    {
-      id: 2,
-      name: "Hotel B",
-      type: "Budget",
-      city: "Kachura",
-      address: "Lower kachura",
-      distance: 10,
-      photos: "hotelB.jpg",
-      title: "Hotel B Title",
-      desc: "Budget-friendly hotel for travelers",
-      rooms: 30,
-      rating: 3.8,
-      cheapestPrice: 80,
-      _id: 'Hotel B_id'
-    },
-    {
-      id: 3,
-      name: "Hotel C",
-      type: "Resort",
-      city: "Shigar",
-      address: "Shigar fort",
-      distance: 15,
-      photos: "hotelC.jpg",
-      title: "Hotel C Title",
-      desc: "Resort with a scenic view near Shigar fort",
-      rooms: 40,
-      rating: 4.2,
-      cheapestPrice: 120,
-      _id: 'Hotel C_id'
-    },
-    {
-      id: 4,
-      name: "Hotel D",
-      type: "Guesthouse",
-      city: "Deosai",
-      address: "Deosai plain",
-      distance: 20,
-      photos: "hotelD.jpg",
-      title: "Hotel D Title",
-      desc: "Guesthouse in the beautiful Deosai plain",
-      rooms: 25,
-      rating: 4.0,
-      cheapestPrice: 100,
-      _id: 'Hotel D_id'
-    },
-  ];
+
 
   return (
     <>
@@ -171,10 +109,10 @@ function HotelList() {
       </div>
       <div style={{ height: 400, width: "100%" }}>
         <DataGrid
-          rows={rows}
+          rows={hotelList}
           columns={columns}
           pageSize={5}
-        //   loading={isLoading}
+          loading={isLoading}
           getRowId={getRowId}
         />
       </div>

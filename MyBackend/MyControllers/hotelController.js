@@ -2,21 +2,24 @@ import Hotel from "../MyModels/hotelModel.js";
 import upload from "../Utilities/multer.js";
 import mongoose from "mongoose";
 
-export const createHotel = async (req, res, next) => {
+export const create_Hotel = async (req, res, next) => {
   try {
     upload.array("photos", 4)(req, res, async function (err) {
-      if(req.files.length === 0  ){
+      if (req.files.length === 0) {
         //check file field empty or not
-        return res.status(400).json({error: 'no files selected yet'});
+        return res.status(400).json({ error: "no files selected yet" });
       }
       if (err) {
         // Handle Multer upload error
         console.error("Error uploading images:", err); // Log the error for debugging
-        return res.status(500).json({ error: "May be your file size too large or Invalid file format " });
+        return res
+          .status(500)
+          .json({
+            error: "May be your file size too large or Invalid file format ",
+          });
       }
       // Continue only if there are no Multer upload errors
-      
-      
+
       try {
         // Get the file path of the uploaded image from req.file
         const photos = req.files.map((file) => file.path);
@@ -27,7 +30,6 @@ export const createHotel = async (req, res, next) => {
 
         const savedHotel = await newHotel.save();
         res.status(200).json(savedHotel);
-
       } catch (error) {
         // Handle any errors that occur during hotel creation
         console.error("Error creating hotel:", error); // Log the error for debugging
@@ -36,6 +38,40 @@ export const createHotel = async (req, res, next) => {
     });
   } catch (err) {
     console.error("Error in createHotel:", err); // Log the error for debugging
+    next(err);
+  }
+};
+export const createHotel = async (req, res, next) => {
+  try {
+    upload.single("photo")(req, res, async function (err) {
+      if (err) {
+        // Handle Multer upload error
+        console.error("Error uploading image:", err);
+        return res.status(500).json({
+          error: "May be your file size too large or Invalid file format ",
+        });
+      }
+
+      // Continue only if there are no Multer upload errors
+
+      try {
+        // Get the file path of the uploaded image from req.file
+        const photo = req.file;
+        const newHotel = new Hotel({
+          ...req.body,
+          photo: photo,
+        });
+
+        const savedHotel = await newHotel.save();
+        res.status(200).json(savedHotel);
+      } catch (error) {
+        // Handle any errors that occur during hotel creation
+        console.error("Error creating hotel:", error);
+        res.status(500).json({ error: "Error creating hotel" });
+      }
+    });
+  } catch (err) {
+    console.error("Error in createHotel:", err);
     next(err);
   }
 };
